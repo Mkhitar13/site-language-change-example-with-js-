@@ -11,15 +11,19 @@ img{
 }
 header{
       height: auto;
+      background: black;
       display: grid;
       grid-template-columns: 25% 75%;
 }
 #header-logo{
-      width: 70%;
       margin: 0 auto;
+      padding: 50px;
 }
+#mini-display-logo{
+      display: none;
+}
+
 #menu{
-      background: black;
       display: grid;
       grid-template-rows: 25% 25% 25% 5%;
       height: auto;
@@ -32,11 +36,14 @@ header{
 #menu-links > a{
       color: white;
       text-decoration: none;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
 }
 #menu-links > a:hover{
       color: #1475A2;
       cursor: pointer;
+}
+ #mini-menu{
+      display: none;
 }
 
 #in-header-icons{
@@ -49,7 +56,7 @@ header{
 #in-header-language {
       display: grid;
       grid-template-columns: 50% 50%;
-      margin: auto;
+      margin: 20px auto;
       color: white;
       gap: 10px;
 }
@@ -183,10 +190,28 @@ footer{
 
 
 
-
-
+/* =================================================================================================================== */
+.arrow-for-services-button{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 50px;
+      height: 25px;
+}
+.button{
+      width: 200px;
+      height: 50px;
+      background-color: white;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-content: center;
+      align-self: center;
+}
 
 /* -------------------------------------------------------------------------------------------------- */
+
+
+
 @media only screen and (max-width: 1800px){
       #in-header-language p{
             font-size: 25px;
@@ -223,7 +248,6 @@ footer{
       footer{
             grid-template-columns: 90%;
             justify-content: center;
-   
       }
       #footer-right-section{
             padding-top: 100px;
@@ -232,21 +256,97 @@ footer{
       }
 }
 
-@media only screen and (max-width: 975px){
-      #in-header-icons{
-            gap: 3%;
+@media only screen and (max-width: 1024px){  
+
+      #menu-links, #in-header-icons, #big-display-logo, #mini-links{
+            display: none;
       }
-      #menu-links > a{
-            font-size: 0.5rem;
+
+      header{
+            grid-template-columns: 100%;
+            background-color: white;
       }
-      #in-header-language p{
-            font-size: 17px;
-      }
-      #services{
-            padding: 200px 0;
+
+      #menu{
+            height: 200px;
+            padding: 10px 0;
             display: grid;
-            grid-template-columns: 1fr;  
-            gap: 100px;
+            align-content: center;
+            grid-template-columns: 35% 50% 10%;
+            grid-template-rows: 1fr;
+            column-gap: 10px;
+      }
+
+      #header-logo{
+            display: grid;
+            align-self: center;
+      }
+
+      #mini-display-logo{
+            width: 200px;
+            display: grid;
+      }
+
+      #mini-menu{            
+            display: grid;
+            position: relative;            
+            justify-self: right;
+            width: 40px;  
+            align-self: center;
+      }
+
+      #hamburger-menu{
+            width: 40px;
+      }  
+      #mini-links ul{
+            padding: 20px;
+      }
+      #mini-links ul li{
+            width: 150px;
+            text-align: center;
+            list-style-type: none;
+      }   
+      #mini-links ul li a{
+            text-decoration: none;
+            color: white;
+      }
+      #mini-links ul li a:hover{
+            color: #1475A2;
+      }
+      #hamburger-menu:hover+#mini-links{
+            position: absolute;
+            top: 50px;
+            right: 0;
+            display: grid;
+            width: 200px;
+            padding: 20px;
+            z-index: 100;
+            background-color: #1475A2;
+            color: white;
+      }
+
+      #in-header-language{
+            display: grid;
+            align-content: center;
+            justify-self: start;
+            margin: 0;
+            gap: 10px;
+      }
+      #in-header-language a{
+            color: black;
+            font-size: 15px;
+      }
+      #in-header-language a:active{
+            color: gray;
+            text-decoration: underline;
+      }
+
+      #services{
+            padding: 50px 0;
+            display: grid;
+            grid-template-columns: 2fr 2fr;  
+            row-gap: 100px;
+            
             justify-items: center;
       }
       .service{
@@ -267,12 +367,29 @@ footer{
 }
 
 
-
 @media only screen and (max-width: 700px){
-      #menu-links > a{
+      #menu{
+            height: 100px;
+            padding: 5px 0;
+            display: grid;
+            align-content: center;
+            grid-template-columns: 55% 15% 15%;
+            grid-template-rows: 1fr;
+      }
+      #mini-display-logo{
+            width: 100px;
+      }
+      #hamburger-menu{
+            display: grid;
+            align-self: center;
+            width: 20px;
+      }
+      #in-header-language a{
             font-size: 10px;
       }
-
+      footer p{
+            font-size: 8px;
+      }
 }
 
 
@@ -286,9 +403,6 @@ footer{
 
 
 
-
-  
-    
 
 
 

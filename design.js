@@ -39,7 +39,7 @@ let data = {
         servicesItem1:"Design",
         servicesItem2 :"Outdoor advertising",
         servicesItem3:"Printing",
-        servicesItem4 :"Laser և milling engraving",
+        servicesItem4 :"Laser and milling engraving",
 
         aboutUs:"About us",
         
